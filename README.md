@@ -40,3 +40,23 @@ for (int i = 0; i < tasks; ++i) {
 
 workerQueue.finish();
 ```
+
+To build and run the example:
+
+```sh
+➜  threadpool git:(master) ✗ mkdir build
+➜  threadpool git:(master) ✗ cd build
+➜  build git:(master) ✗  cmake ../
+➜  build git:(master) ✗ make
+Scanning dependencies of target threadpool
+[ 50%] Building CXX object CMakeFiles/threadpool.dir/main.cpp.o
+[100%] Linking CXX executable threadpool
+[100%] Built target threadpool
+
+➜  build git:(master) ✗ ./threadpool
+usage: ./threadpool threads queue_size tasks
+
+➜  build git:(master) ✗ ./threadpool 5 10 100
+Initializing ThreadPool with 5 threads and queue size of 10
+Rejected tasks: 8
+```

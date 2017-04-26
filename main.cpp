@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
     int queueSize = std::stoi(argv[2]);
     int tasks = std::stoi(argv[3]);
 
-    std::cout << "Initializing ThreadPool with queue size of "
+    std::cout << "Initializing ThreadPool with "<< threadNum << " threads and queue size of "
               << queueSize << std::endl;
     ThreadPool<int, IntWorker> workerQueue(threadNum, queueSize);
 
